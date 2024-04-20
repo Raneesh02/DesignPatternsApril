@@ -4,10 +4,11 @@ import org.testng.annotations.Test;
 import utilities.DbUtility;
 
 public class DbUtilTests {
+    DbUtility dbUtility = new DbUtility();
 
     @Test
     public void dbTest1(){
-        DbUtility dbUtility = new DbUtility();
+
         dbUtility.runQuery("select * from item");
     }
 
