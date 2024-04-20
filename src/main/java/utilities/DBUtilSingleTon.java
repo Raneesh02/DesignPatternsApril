@@ -10,15 +10,32 @@ public class DBUtilSingleTon {
 //    }
 
     //Lazy Initialization
+//    static DBUtilSingleTon dbUtilSingleTon;
+//
+//    public static DBUtilSingleTon getInstance()  {
+//        if(dbUtilSingleTon == null) {
+//            dbUtilSingleTon = new DBUtilSingleTon();
+//        }
+//        else{
+//            System.out.println("dbutil already created");
+//        }
+//        return dbUtilSingleTon;
+//    }
+    //Lazy Initialization
+
+    //Thread safe init
     static DBUtilSingleTon dbUtilSingleTon;
 
-    public static DBUtilSingleTon getInstance(){
+    public static synchronized DBUtilSingleTon getInstance()  {
         if(dbUtilSingleTon == null) {
             dbUtilSingleTon = new DBUtilSingleTon();
         }
+        else{
+            System.out.println("dbutil already created");
+        }
         return dbUtilSingleTon;
     }
-    //Lazy Initialization
+    //Thread safe init
 
     //Control the constructor
     private DBUtilSingleTon(){

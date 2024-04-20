@@ -2,9 +2,20 @@ package org.example;
 
 import org.testng.annotations.Test;
 import utilities.DBUtilSingleTon;
+import utilities.MultiTh;
 
 public class DbUtilSingletonTests {
     DBUtilSingleTon dbUtilSingleTon = DBUtilSingleTon.getInstance();
+
+    @Test
+    public void testMultiTh(){
+
+        for(int i=1;i<=1000;i++) {
+            MultiTh th = new MultiTh();
+            th.start();
+        }
+
+    }
 
     @Test
     public void testDbUtil(){
