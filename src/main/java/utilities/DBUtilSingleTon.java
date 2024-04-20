@@ -2,7 +2,23 @@ package utilities;
 
 public class DBUtilSingleTon {
 
-    public static DBUtilSingleTon dbUtilSingleTon = new DBUtilSingleTon();
+//    //Eager initialization
+//    static DBUtilSingleTon dbUtilSingleTon = new DBUtilSingleTon();
+//
+//    public static DBUtilSingleTon getInstance(){
+//        return dbUtilSingleTon;
+//    }
+
+    //Lazy Initialization
+    static DBUtilSingleTon dbUtilSingleTon;
+
+    public static DBUtilSingleTon getInstance(){
+        if(dbUtilSingleTon == null) {
+            dbUtilSingleTon = new DBUtilSingleTon();
+        }
+        return dbUtilSingleTon;
+    }
+    //Lazy Initialization
 
     //Control the constructor
     private DBUtilSingleTon(){
@@ -10,13 +26,13 @@ public class DBUtilSingleTon {
         //open connection to Oracle , mysql, mongo db
     }
 
-    public static DBUtilSingleTon getInstance(){
-        return dbUtilSingleTon;
-    }
-
     public void runQuery(String query){
         System.out.println("Query has run"+ query);
         //closeConnection()
+    }
+
+    public static void method(){
+        System.out.println("method");
     }
 
 }
