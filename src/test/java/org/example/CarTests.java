@@ -8,6 +8,19 @@ public class CarTests {
 
     //With GPS + Cruise Control
     @Test
+    public void carTest1BFluent(){
+        //CarPage.verifyCarPresent()  //validate to car
+        CarB carB = new CarB.CarBBuilder("honda", "civic")
+                .setCruiseControl(true)
+                .setGps(true)
+                .build();
+
+
+
+    }
+
+    //With GPS + Cruise Control
+    @Test
     public void carTest1B(){
         //CarPage.verifyCarPresent()  //validate to car
         CarB.CarBBuilder carBBuilder = new CarB.CarBBuilder("honda", "civic");

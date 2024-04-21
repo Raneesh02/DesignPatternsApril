@@ -22,20 +22,24 @@ public class CarB {
         private String transmission;
         private boolean gps, cruiseControl;
 
-        public void setYear(int year) {
+        public CarBBuilder setYear(int year) {
             this.year = year;
+            return this;
         }
 
-        public void setTransmission(String transmission) {
+        public CarBBuilder setTransmission(String transmission) {
             this.transmission = transmission;
+            return this;
         }
 
-        public void setGps(boolean gps) {
+        public CarBBuilder setGps(boolean gps) {
             this.gps = gps;
+            return this;
         }
 
-        public void setCruiseControl(boolean cruiseControl) {
+        public CarBBuilder setCruiseControl(boolean cruiseControl) {
             this.cruiseControl = cruiseControl;
+            return this;
         }
 
 
