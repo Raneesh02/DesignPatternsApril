@@ -14,4 +14,18 @@ public class HomePage {
         return this;
     }
 
+
+    public void addProduct(String product){
+        HomePage homePage = new HomePage();
+        homePage.search(product);
+
+
+        ProductDetailPage productDetailPage = new ProductDetailPage();
+        productDetailPage.addToCart();
+
+
+        CartPage cartPage = new CartPage();
+        cartPage.isProductAdded(product);
+    }
+
 }

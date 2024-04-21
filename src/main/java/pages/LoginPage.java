@@ -5,6 +5,9 @@ public class LoginPage {
     //Webelements
     //Webelement login= driver.findElement();
 
+    //@FindBy(id="fewaf")
+    //WebElement logn
+
 
     //methods
     public LoginPage enterEmail(String email) {
