@@ -14,7 +14,7 @@ import java.util.Properties;
 
 public class MultiPlatExecution {
 
-    PageFactory pageFactory = new PageFactory();
+    PageFactory pageFactory = PageFactory.getPageFactory();
 
 
     @Test
