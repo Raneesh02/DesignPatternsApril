@@ -13,6 +13,7 @@ public class CarB {
         this.year = carBBuilder.year;
         this.gps = carBBuilder.gps;
         this.transmission = carBBuilder.transmission;
+        //hit your APIs
     }
 
     public static class CarBBuilder{
@@ -45,7 +46,7 @@ public class CarB {
         }
 
         public CarB build(){
-            //hit your APIs
+
             return new CarB(this);
         }
 

@@ -26,6 +26,8 @@ public class CarTests {
         carBBuilder.setTransmission("manual");
         CarB carB = carBBuilder.build();
 
+        //CarDetailPage.verifyName(carB.getName())
+
     }
 
 
